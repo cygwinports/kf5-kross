@@ -1,0 +1,33 @@
+inherit kf5
+
+NAME="kf5-kross"
+VERSION=5.10.0
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="KDE 5 embedded QtScript library"
+DESCRIPTION="Kross is a scripting bridge to embed scripting functionality
+into an application. It supports QtScript as a scripting interpreter backend."
+
+SRC_URI="mirror://kde/stable/frameworks/${VERSION%\.*}/portingAids/${NAME#kf5-}-${VERSION}.tar.xz"
+
+PKG_NAMES="libKF5Kross5 libKF5Kross-devel"
+libKF5Kross5_CONTENTS="
+	usr/bin/cygKF5KrossCore-5.dll
+	usr/bin/cygKF5KrossUi-5.dll
+	usr/bin/kf5kross.exe
+	${QT5_PLUGINSDIR#/}
+	usr/share/doc/
+	usr/share/locale/
+	usr/share/man/
+"
+libKF5Kross_devel_REQUIRES="libKF5Config-devel libKF5I18n-devel libKF5IconThemes-devel libKF5Parts-devel libKF5-devel libQt5Core-devel libQt5Gui-devel libQt5Script-devel"
+libKF5Kross_devel_CONTENTS="
+	usr/include/KF5/KrossCore/
+	usr/include/KF5/KrossUi/
+	usr/include/KF5/kross_version.h
+	usr/lib/cmake/KF5Kross/
+	${QT5_MKSPECSDIR#/}/modules/qt_KrossCore.pri
+	${QT5_MKSPECSDIR#/}/modules/qt_KrossUi.pri
+	usr/lib/libKF5KrossCore.dll.a
+	usr/lib/libKF5KrossUi.dll.a
+"
