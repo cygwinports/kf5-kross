@@ -1,0 +1,11 @@
+--- origsrc/kross-5.12.0/src/core/metafunction.h	2015-07-05 04:12:14.000000000 -0500
++++ src/kross-5.12.0/src/core/metafunction.h	2015-07-22 11:19:08.071574100 -0500
+@@ -44,7 +44,7 @@ static const char s_fakeClassName[] = "S
+  * classes located in kdebindings inherit this class to connect a
+  * QObject signal together with a callable python or ruby method.
+  */
+-class KROSSCORE_EXPORT MetaFunction : public QObject
++class MetaFunction : public QObject
+ {
+ public:
+ 
