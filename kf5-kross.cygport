@@ -21,7 +21,7 @@ libKF5Kross5_CONTENTS="
 	usr/share/locale/
 	usr/share/man/
 "
-libKF5Kross_devel_REQUIRES="libKF5Config-devel libKF5I18n-devel libKF5IconThemes-devel libKF5Parts-devel libKF5-devel libQt5Core-devel libQt5Gui-devel libQt5Script-devel"
+libKF5Kross_devel_REQUIRES="libKF5Config-devel libKF5I18n-devel libKF5IconThemes-devel libKF5Parts-devel libQt5Core-devel libQt5Gui-devel libQt5Script-devel"
 libKF5Kross_devel_CONTENTS="
 	usr/include/KF5/KrossCore/
 	usr/include/KF5/KrossUi/
